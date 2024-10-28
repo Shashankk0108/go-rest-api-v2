@@ -1,0 +1,113 @@
+version: '3'
+
+vars:
+  APP_NAME: go-rest-api
+  MAIN_PATH: .
+  BINARY_NAME: main
+  DOCKER_IMAGE: go-rest-api:latest
+
+tasks:
+  default:
+    desc: Display available tasks
+    cmds:
+      - task --list
+
+  install:
+    desc: Install project dependencies
+    cmds:
+      - go mod download
+      - go mod tidy
+      - echo "Dependencies installed successfully"
+
+  build:
+    desc: Build the application
+    cmds:
+      - go build -o bin/{{.BINARY_NAME}} {{.MAIN_PATH}}
+      - echo "Build completed successfully"
+
+  run:
+    desc: Run the application
+    deps: [build]
+    cmds:
+      - ./bin/{{.BINARY_NAME}}
+
+  dev:
+    desc: Run the application in development mode
+    cmds:
+      - go run main.go
+
+  test:
+    desc: Run tests
+    cmds:
+      - go test -v ./...
+
+  test-coverage:
+    desc: Run tests with coverage
+    cmds:
+      - go test -v -coverprofile=coverage.out ./...
+      - go tool cover -html=coverage.out -o coverage.html
+      - echo "Coverage report generated at coverage.html"
+
+  lint:
+    desc: Run linter
+    cmds:
+      - go fmt ./...
+      - go vet ./...
+
+  clean:
+    desc: Clean build artifacts
+    cmds:
+      - rm -rf bin/
+      - rm -f coverage.out coverage.html
+      - echo "Cleaned build artifacts"
+
+  docker-build:
+    desc: Build Docker image
+    cmds:
+      - docker build -t {{.DOCKER_IMAGE}} .
+      - echo "Docker image built successfully"
+
+  docker-up:
+    desc: Start Docker containers
+    cmds:
+      - docker-compose up -d
+      - echo "Docker containers started"
+
+  docker-down:
+    desc: Stop Docker containers
+    cmds:
+      - docker-compose down
+      - echo "Docker containers stopped"
+
+  docker-logs:
+    desc: View Docker logs
+    cmds:
+      - docker-compose logs -f
+
+  docker-restart:
+    desc: Restart Docker containers
+    cmds:
+      - task docker-down
+      - task docker-up
+
+  migrate-up:
+    desc: Run database migrations
+    cmds:
+      - echo "Migrations are handled automatically on application startup"
+
+  db-shell:
+    desc: Connect to PostgreSQL database
+    cmds:
+      - docker-compose exec postgres psql -U postgres -d go_rest_api
+
+  swagger:
+    desc: Generate Swagger documentation
+    cmds:
+      - swag init -g main.go -o docs
+      - echo "Swagger documentation generated"
+
+  help:
+    desc: Show help information
+    cmds:
+      - echo "Available tasks:"
+      - task --list
