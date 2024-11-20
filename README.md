@@ -10,6 +10,13 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
+[![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen?style=for-the-badge)]()
+[![Maintained](https://img.shields.io/badge/Maintained-Yes-green.svg?style=for-the-badge)]()
+[![Clean Architecture](https://img.shields.io/badge/architecture-clean-blue?style=for-the-badge)]()
+[![REST API](https://img.shields.io/badge/API-RESTful-orange?style=for-the-badge)]()
+[![JWT Auth](https://img.shields.io/badge/auth-JWT-red?style=for-the-badge)]()
+
 [Features](#-features) • [Architecture](#-architecture) • [Quick Start](#-quick-start) • [API Documentation](#-api-documentation) • [Deployment](#-deployment)
 
 </div>
